@@ -36,17 +36,25 @@ let bici = [
     }
 ];
 
+let biciLeggera = bici[0];
 
 // procediamo a destrutturare i nostri oggetti con le relative proprietà 
 
-let {nome, peso} = bici;
+// let {nome, peso} = bici;
 
 // function che ci indichi quale delle bici ha il peso minore e stampi con innerHTML il risultato
 
 function pesoMinore() {
-    for (let key in bici) {
+    for (let i = 0; i< bici.length; i++) {
+        const weigth = bici[i].peso;
+
+        if (weigth < biciLeggera.peso) {
+            biciLeggera = bici[i];
+        }
         
     }
+
+    let {nome, peso} = bici;
 }
 
 
